@@ -19,8 +19,8 @@
 * Create your own `app/config/local/database.php` for development settings.
 * Run `php artisan migrate`.
 * To create a first user in database (optional):
-** Check/edit `app/database/seeds/UsersTableSeeder.php` for credentials.
-** Run `php artisan db:seed`.
+	* Check/edit `app/database/seeds/UsersTableSeeder.php` for credentials.
+	* Run `php artisan db:seed`.
 * Run `npm install` to install Grunt stuff.
 * Run `grunt` to build development assets for the first time.
 
