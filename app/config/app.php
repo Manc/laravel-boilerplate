@@ -107,6 +107,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		/* Additional Providers */
+		'Robbo\Presenter\PresenterServiceProvider', // Presenter
+		'Zizaco\Confide\ConfideServiceProvider', // Confide
 	),
 
 	/*
@@ -173,6 +176,10 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+		/* Additional Aliases */
+		'Carbon'          => 'Carbon\Carbon', // Carbon
+		'Presentable'     => 'Robbo\Presenter\PresentableInterface', // Presenter
+		'Confide'         => 'Zizaco\Confide\ConfideFacade', // Confide Alias
 	),
 
 );

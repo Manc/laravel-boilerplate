@@ -11,7 +11,27 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+/** ------------------------------------------
+ *  Frontend Routes
+ *  ------------------------------------------
+ */
+
+# Home page
+Route::get('/', array('as' => 'home', 'uses' => 'FrontendDefaultController@getHome'));
+
+
+/** ------------------------------------------
+ *  Admin Routes
+ *  ------------------------------------------
+ */
+
+Route::get('admin/login', array('as' => 'login', 'uses' => 'AdminAuthController@getLogin'));
+Route::post('admin/login', array('as' => 'login.post', 'uses' => 'AdminAuthController@postLogin'));
+Route::get('admin/logout', array('as' => 'logout', 'uses' => 'AdminAuthController@getLogout'));
+
+Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
+
+	# Admin Dashboard
+	Route::get('/', array('as' => 'admin', 'uses' => 'AdminDefaultController@getDashboard'));
+
 });

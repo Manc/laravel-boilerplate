@@ -1,4 +1,31 @@
-## Laravel PHP Framework
+# Laravel 4.1 Boilerplate
+
+## What's included?
+
+* Laravel 4.1
+* Confide for login
+* Controllers and views for plain website and an admin area with Bootstrap 3
+* Setup to build assets with Grunt
+
+## Installation
+
+* Pull.
+* Change to the project directory.
+* Run `composer install`.
+* Run `php artisan key:generate` to create a random key for the project.
+* Edit `bootstrap/start.php` and insert your local hostname near `$env`.
+* Edit `app/config/app.php` for global project settings.
+* Create your own `app/config/local/app.php` for development settings.
+* Create your own `app/config/local/database.php` for development settings.
+* Run `php artisan migrate`.
+* To create a first user in database (optional):
+** Check/edit `app/database/seeds/UsersTableSeeder.php` for credentials.
+** Run `php artisan db:seed`.
+* Run `npm install` to install Grunt stuff.
+* Run `grunt` to build development assets for the first time.
+
+
+# Laravel PHP Framework
 
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
 
